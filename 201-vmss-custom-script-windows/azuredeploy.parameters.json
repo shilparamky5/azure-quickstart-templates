@@ -3,13 +3,13 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
 	"adminUsername": {
-	    "value": "azureuser"
+	    "value": "vmsshb2"
 	},
 	"adminPassword": {
-	    "value": "GEN-PASSWORD"
+	    "value": "hb098)(*"
 	},
 	"vmssName": {
-	    "value": "GEN-UNIQUE-8"
+	    "value": "vmsshb2"
 	}
     }
 }

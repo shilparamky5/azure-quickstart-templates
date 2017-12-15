@@ -10,7 +10,7 @@
     },
     "vmSku": {
       "type": "string",
-      "defaultValue": "Standard_A2",
+      "defaultValue": "Standard_A0",
       "metadata": {
         "description": "VM size for the VM Scale Set + the mgmt VM"
       }

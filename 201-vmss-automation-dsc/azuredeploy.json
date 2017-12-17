@@ -237,7 +237,7 @@
     "dscModules": {
       "xNetworking": {
         "moduleName": "xNetworking",
-        "moduleUri": "https://raw.github.com/Azure/azure-quickstart-templates/master/201-vmss-automation-dsc/xNetworking.zip"
+        "moduleUri": "https://github.com/shilparamky5/azure-quickstart-templates/blob/shilparamky5-patch-2/201-vmss-automation-dsc/xNetworking.zip"
       }
     },
     "diagnosticsStorageAccountName": "[concat(variables('uniqueStringArray')[0], 'diagsa')]",
@@ -506,7 +506,7 @@
                     }
                   },
                   "settings": {
-                    "ModulesUrl": "https://raw.github.com/Azure/azure-quickstart-templates/master/201-vmss-automation-dsc/UpdateLCMforAAPull.zip",
+                    "ModulesUrl": "https://github.com/shilparamky5/azure-quickstart-templates/blob/shilparamky5-patch-2/201-vmss-automation-dsc/UpdateLCMforAAPull.ps1",
                     "SasToken": "",
                     "ConfigurationFunction": "UpdateLCMforAAPull.ps1\\ConfigureLCMforAAPull",
                     "Properties": [

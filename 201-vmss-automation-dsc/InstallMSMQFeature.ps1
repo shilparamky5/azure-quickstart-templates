@@ -1,11 +1,13 @@
 Configuration InstallMSMQFeature
 {
-  Node "localhost"
-  {
-    WindowsFeature MessageQueueFeature
-    {
-      Ensure = "Present"
-      Name = "MSMQ"
-    }
-  }
+  Import-DSCResource -ModuleName PSDesiredStateConfiguration, xNetworking
+  
+      Node "localhost"
+      {
+        WindowsFeature MessageQueueFeature
+        {
+          Ensure = "Present"
+          Name = "MSMQ"
+        }
+      }
 }

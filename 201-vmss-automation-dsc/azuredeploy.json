@@ -157,7 +157,7 @@
     },
     "configurationURI": {
       "type": "string",
-      "defaultValue": "https://raw.github.com/shilparamky5/azure-quickstart-templates/shilparamky5-patch-2/201-vmss-automation-dsc/InstallMSMQFeature.ps1",
+      "defaultValue": "https://raw.github.com/shilparamky5/azure-quickstart-templates/master/201-vmss-automation-dsc/InstallMSMQFeature.ps1",
       "metadata": {
         "description": "The URI for the DSC configuration "
       }

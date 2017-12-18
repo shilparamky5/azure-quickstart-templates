@@ -508,7 +508,7 @@
                   "settings": {
                     "ModulesUrl": "https://raw.github.com/Azure/azure-quickstart-templates/master/201-vmss-automation-dsc/UpdateLCMforAAPull.ps1",
                     "SasToken": "",
-                    "ConfigurationFunction": "ConfigureLCMforAAPull",
+                    "ConfigurationFunction": "UpdateLCMforAAPull.ps1\\ConfigureLCMforAAPull",
                     "Properties": [
                       {
                         "Name": "RegistrationKey",

@@ -506,7 +506,7 @@
                     }
                   },
                   "settings": {
-                    "ModulesUrl": "https://raw.github.com/Azure/azure-quickstart-templates/master/201-vmss-automation-dsc/UpdateLCMforAAPull.zip",
+                    "ModulesUrl": "https://github.com/Azure/azure-quickstart-templates/raw/master/dsc-extension-azure-automation-pullserver/UpdateLCMforAAPull.zip",
                     "SasToken": "",
                     "ConfigurationFunction": "UpdateLCMforAAPull.ps1\\ConfigureLCMforAAPull",
                     "Properties": [

@@ -10,7 +10,7 @@
     },
     "vmSku": {
       "type": "string",
-      "defaultValue": "Standard_A2",
+      "defaultValue": "Standard_A0",
       "metadata": {
         "description": "VM size for the VM Scale Set + the mgmt VM"
       }
@@ -31,7 +31,7 @@
     },
     "instanceCount": {
       "type": "int",
-      "defaultValue": 5,
+      "defaultValue": 2,
       "metadata": {
         "description": "Number of VM instances (100 or less)."
       },
@@ -63,7 +63,7 @@
     },
     "nodeConfigurationName": {
       "type": "string",
-      "defaultValue": "MyService.webServer",
+      "defaultValue": "InstallMSMQFeature.InstallMSMQFeature",
       "metadata": {
         "description": "The name of the node configuration, on the Azure Automation DSC pull server, that this node will be configured as"
       }
@@ -150,21 +150,21 @@
     },
     "configurationName": {
       "type": "string",
-      "defaultValue": "MyService",
+      "defaultValue": "InstallMSMQFeature",
       "metadata": {
         "description": "The name of the DSC Configuration. The name must match the name in the URI."
       }
     },
     "configurationURI": {
       "type": "string",
-      "defaultValue": "https://raw.github.com/Azure/azure-quickstart-templates/master/201-vmss-automation-dsc/webServer.ps1",
+      "defaultValue": "https://raw.github.com/shilparamky5/azure-quickstart-templates/shilparamky5-patch-2/201-vmss-automation-dsc/InstallMSMQFeature.ps1",
       "metadata": {
         "description": "The URI for the DSC configuration "
       }
     },
     "configurationDescription": {
       "type": "string",
-      "defaultValue": "Web Server",
+      "defaultValue": "InstallMSMQFeature",
       "metadata": {
         "description": "The description of the configuration."
       }
@@ -237,7 +237,7 @@
     "dscModules": {
       "xNetworking": {
         "moduleName": "xNetworking",
-        "moduleUri": "https://raw.github.com/Azure/azure-quickstart-templates/master/201-vmss-automation-dsc/xNetworking.zip"
+        "moduleUri": "https://github.com/Azure/azure-quickstart-templates/raw/master/dsc-extension-azure-automation-pullserver/xNetworking.zip"
       }
     },
     "diagnosticsStorageAccountName": "[concat(variables('uniqueStringArray')[0], 'diagsa')]",
@@ -506,7 +506,7 @@
                     }
                   },
                   "settings": {
-                    "ModulesUrl": "https://raw.github.com/Azure/azure-quickstart-templates/master/201-vmss-automation-dsc/UpdateLCMforAAPull.zip",
+                    "ModulesUrl": "https://github.com/Azure/azure-quickstart-templates/raw/master/dsc-extension-azure-automation-pullserver/UpdateLCMforAAPull.zip",
                     "SasToken": "",
                     "ConfigurationFunction": "UpdateLCMforAAPull.ps1\\ConfigureLCMforAAPull",
                     "Properties": [

@@ -1,7 +1,7 @@
 
 # VM Scale Set Configuration managed by Azure Automation DSC
 
-[![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fgithub.com%2Fshilparamky5%2Fazure-quickstart-templates%2Fblob%2Fshilparamky5-patch-2%2F201-vmss-automation-dsc%2Fazuredeploy.json)
+[![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fshilparamky5%2Fazure-quickstart-templates%2Fshilparamky5-patch-2%2F201-vmss-automation-dsc%2Fazuredeploy.json)
 
 This repo serves to prove an ARM template to deploy a VM Scale Set where virtual machines are deployed as registered nodes in the Azure Automation Desired State Configuration service, and node configuration is guaranteed consistent after deployment, and the AADSC service components are provided in the same deployment template.
 

@@ -63,7 +63,7 @@
     },
     "nodeConfigurationName": {
       "type": "string",
-      "defaultValue": "InstallMSMQFeature.localhost",
+      "defaultValue": "MyServices.localhost",
       "metadata": {
         "description": "The name of the node configuration, on the Azure Automation DSC pull server, that this node will be configured as"
       }
@@ -150,21 +150,21 @@
     },
     "configurationName": {
       "type": "string",
-      "defaultValue": "InstallMSMQFeature",
+      "defaultValue": "MyServices",
       "metadata": {
         "description": "The name of the DSC Configuration. The name must match the name in the URI."
       }
     },
     "configurationURI": {
       "type": "string",
-      "defaultValue": "https://raw.github.com/shilparamky5/azure-quickstart-templates/master/201-vmss-automation-dsc/InstallMSMQFeature.ps1",
+      "defaultValue": "https://raw.github.com/shilparamky5/azure-quickstart-templates/master/201-vmss-automation-dsc/MyServices.ps1",
       "metadata": {
         "description": "The URI for the DSC configuration "
       }
     },
     "configurationDescription": {
       "type": "string",
-      "defaultValue": "InstallMSMQFeature",
+      "defaultValue": "MyServices",
       "metadata": {
         "description": "The description of the configuration."
       }
@@ -613,13 +613,13 @@
     {
       "type": "Microsoft.Insights/autoscaleSettings",
       "apiVersion": "2015-04-01",
-      "name": "autoscalehost1",
+      "name": "autoscalehost2",
       "location": "[resourceGroup().location]",
       "dependsOn": [
         "[concat('Microsoft.Compute/virtualMachineScaleSets/', parameters('vmSSName'))]"
       ],
       "properties": {
-        "name": "autoscalehost1",
+        "name": "autoscalehost2",
         "targetResourceUri": "[concat('/subscriptions/',subscription().subscriptionId, '/resourceGroups/',  resourceGroup().name, '/providers/Microsoft.Compute/virtualMachineScaleSets/', parameters('vmSSName'))]",
         "enabled": true,
         "profiles": [

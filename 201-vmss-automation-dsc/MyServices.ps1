@@ -28,7 +28,7 @@ Configuration MyServices
         }
         
         archive ZipFile {
-        Path = "C:\HedgebookFiles"
+        Path = "C:\HedgebookFiles\isa_services.zip"
         Destination = "C:\HedgebookFiles"
         Ensure = 'Present'
  

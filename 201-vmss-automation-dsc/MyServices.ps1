@@ -18,6 +18,7 @@ Configuration MyServices
             Recurse = $true
             SourcePath = "https://hedgebook.file.core.windows.net/?sv=2017-04-17&ss=bfqt&srt=sco&sp=rwdlacup&se=2017-12-21T19:49:52Z&st=2017-12-21T11:49:52Z&spr=https&sig=bazPRKZVAZYAnvJWEF1NWtbfzc9GcfMrENh7stBUyus%3D"
             DestinationPath = "C:\HedgebookFiles"
+            Expand-Archive C:\HedgebookFiles\isa_services.zip -DestinationPath C:\HedgebookFiles
         }
  
         Log AfterDirectoryCopy
@@ -31,7 +32,7 @@ Configuration MyServices
 
             Name = "PAS Service"
             BuiltInAccount = "LocalSystem"
-            Path = "C:\isa_services\Pas.exe"
+            Path = "C:\HedgebookFiles\isa_services\Pas.exe"
             StartupType = "Manual"
             State       = "Running"
 

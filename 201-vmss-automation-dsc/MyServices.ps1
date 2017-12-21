@@ -38,7 +38,7 @@ Configuration MyServices
 
             Name = "PAS Service"
             BuiltInAccount = "LocalSystem"
-            Path = "C:\HedgebookFiles\isa_services\Pas.exe"
+            Path = "C:\Users\isa_services\Pas.exe"
             StartupType = "Manual"
             State       = "Running"
 

@@ -16,7 +16,7 @@ Configuration MyServices
             Ensure = "Present"  
             Type = "Directory" 
             Recurse = $true
-            SourcePath = "https://hedgebook.file.core.windows.net/?sv=2017-04-17&ss=bfqt&srt=sco&sp=rwdlacup&se=2017-12-21T19:49:52Z&st=2017-12-21T11:49:52Z&spr=https&sig=bazPRKZVAZYAnvJWEF1NWtbfzc9GcfMrENh7stBUyus%3D"
+            SourcePath = "file:///Z:/"
             DestinationPath = "C:\Users"
         }
  

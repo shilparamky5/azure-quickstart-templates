@@ -1,4 +1,3 @@
-
 Configuration MyServices
 {
  Node "localhost"
@@ -11,29 +10,14 @@ Configuration MyServices
       	Name = "MSMQ"
     	}
      
-     Script MapAzureShare
-    {
-        GetScript = 
-        {
-
-        }
-        TestScript = 
-        {
-            Test-Path W:
-        }
-        SetScript = 
-        {
-            Invoke-Expression -Command "net use W: \\hedgebook.file.core.windows.net\configuration"
-        }
-        PsDscRunAsCredential = $credential
-    }
-  
+    
 
         File DirectoryCopy
         {
             Ensure = "Present"  
             Type = "Directory" 
             Recurse = $true
+            New-PSDrive -Name W -PSProvider FileSystem -root \\hedgebook.file.core.windows.net\configuration
             SourcePath = "file:\\\W:\configuration\"
             DestinationPath = "C:\Users"
         }

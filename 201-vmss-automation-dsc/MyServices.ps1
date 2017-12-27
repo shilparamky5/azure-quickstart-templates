@@ -22,26 +22,20 @@ Configuration MyServices
 
      
 
-    New-PSDrive -Name W -PSProvider FileSystem -root \\hedgebook.file.core.windows.net\configuration
 
 
 
-        File DirectoryCopy
 
-        {
-
-            Ensure = "Present"  
-
-            Type = "Directory" 
-
-            Recurse = $true
-
-
-            SourcePath = "file:\\\W:\configuration\"
-
-            DestinationPath = "C:\Users"
-
-        }
+        
+         File DirectoryCopy
+ {
+ DestinationPath = "C:\Users"
+ Credential = $storageCredential
+ Ensure = "Present"
+ SourcePath = "\\[hedgebook].file.core.windows.net\configuration"
+ Type = "Directory"
+ Recurse = $true
+ }
 
  
 

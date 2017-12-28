@@ -2,11 +2,18 @@ Configuration MyServices
 
 {
 
+Import-DscResource –ModuleName 'PSDesiredStateConfiguration' 
+
  Node "localhost"
 
   {
 
-
+   param(
+        [Parameter(Mandatory=$true)]
+        [ValidateNotNullorEmpty()]
+        [PSCredential]
+        $Credential
+    )
 
 
 
@@ -20,23 +27,20 @@ Configuration MyServices
 
     	}
 
-     
-
-
-
-
-
+   
         
-         File DirectoryCopy
- {
- DestinationPath = "C:\Users"
- Credential = $storageCredential
- Ensure = "Present"
- SourcePath = "\\[hedgebook].file.core.windows.net\configuration"
- Type = "Directory"
- Recurse = $true
- }
-
+  File DirectoryCopy
+         
+    {
+         DestinationPath = "C:\Users"
+         Credential = [PSCredential]
+         PsDscRunAsCredential = [PSCredential]
+         Ensure = "Present"
+         SourcePath = "\\hedgebook.file.core.windows.net\configuration"
+         Type = "Directory"
+         Recurse = $true
+    }
+    
  
 
         Log AfterDirectoryCopy

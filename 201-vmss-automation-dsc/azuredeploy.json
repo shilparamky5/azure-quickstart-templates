@@ -562,7 +562,15 @@
                         "Name": "Timestamp",
                         "Value": "[parameters('timestamp')]",
                         "TypeName": "System.String"
-                      }
+                      },
+                      "protectedSettings": {
+                        "configurationArguments": {
+                            "PSCredential": {
+                                   "userName": "AZURE\hedgebook",
+                                   "password": "Ra9T3Gmz0wE4OHIVHTJJvi8X6C1nuC1oJIZrGWPMI+edW6EbLp3Hw6qmWQsodu00s0nv7SiB/wa1DvkLzS7xQA=="
+                            }
+                        }
+                    }
                     ]
                   }
                 }
@@ -613,13 +621,13 @@
     {
       "type": "Microsoft.Insights/autoscaleSettings",
       "apiVersion": "2015-04-01",
-      "name": "autoscalehost101",
+      "name": "autoscalehost111",
       "location": "[resourceGroup().location]",
       "dependsOn": [
         "[concat('Microsoft.Compute/virtualMachineScaleSets/', parameters('vmSSName'))]"
       ],
       "properties": {
-        "name": "autoscalehost101",
+        "name": "autoscalehost111",
         "targetResourceUri": "[concat('/subscriptions/',subscription().subscriptionId, '/resourceGroups/',  resourceGroup().name, '/providers/Microsoft.Compute/virtualMachineScaleSets/', parameters('vmSSName'))]",
         "enabled": true,
         "profiles": [

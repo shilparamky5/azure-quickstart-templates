@@ -562,15 +562,7 @@
                         "Name": "Timestamp",
                         "Value": "[parameters('timestamp')]",
                         "TypeName": "System.String"
-                      },
-                      "protectedSettings": {
-                        "configurationArguments": {
-                            "ParameterOfTypePSCredential1": {
-                                   "userName": "AZURE\hedgebook",
-                                   "password": "Ra9T3Gmz0wE4OHIVHTJJvi8X6C1nuC1oJIZrGWPMI+edW6EbLp3Hw6qmWQsodu00s0nv7SiB/wa1DvkLzS7xQA=="
-                            }
-                        }
-                    }
+                      }
                     ]
                   }
                 }

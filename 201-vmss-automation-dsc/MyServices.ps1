@@ -8,14 +8,6 @@ Import-DscResource –ModuleName 'PSDesiredStateConfiguration'
 
   {
 
-   param(
-        [Parameter(Mandatory=$true)]
-        [ValidateNotNullorEmpty()]
-        [PSCredential]
-        $Credential
-    )
-
-
 
    	 WindowsFeature MessageQueueFeature
 
@@ -33,8 +25,6 @@ Import-DscResource –ModuleName 'PSDesiredStateConfiguration'
          
     {
          DestinationPath = "C:\Users"
-         Credential = [PSCredential]
-         PsDscRunAsCredential = [PSCredential]
          Ensure = "Present"
          SourcePath = "\\hedgebook.file.core.windows.net\configuration"
          Type = "Directory"

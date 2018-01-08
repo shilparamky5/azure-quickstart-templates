@@ -30,7 +30,7 @@ New-PSDrive -Name Z -PSProvider FileSystem -Root "\\hedgebook.file.core.windows.
 
          Ensure = "Present"
 
-         SourcePath = "\\hedgebook.file.core.windows.net\configuration"
+         SourcePath = "Z:\"
 
          Type = "Directory"
 

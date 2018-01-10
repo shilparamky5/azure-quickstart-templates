@@ -60,7 +60,15 @@ Node "localhost"
         Destination = "C:\Windows\System32"
         Ensure = 'Present'
    }
+   
+   Package MSXML
+    {
+        Ensure = 'Present'
+        Name = 'MSXML 4.0 SP3 Parser'
+        Path = 'C:\DemoTo\hbv1\msxml.msi'
+        ProductId = 'BD50E0BC-C17A-4333-916D-65DAE162D2B0'
 
+    }
    
     Service PasService 
     {

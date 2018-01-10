@@ -1,70 +1,53 @@
 Configuration MyServices
-
 {
-
 Import-DscResource –ModuleName 'PSDesiredStateConfiguration' 
+Import-DscResource –ModuleName 'xPSDesiredStateConfiguration' 
 
 Node "localhost"
-
   {
-
    	 WindowsFeature MessageQueueFeature
-    	{
-
+    {
      	Ensure = "Present"
       	Name = "MSMQ"
-   	}
- 
- 
-
-$acctKey = ConvertTo-SecureString -String "Ra9T3Gmz0wE4OHIVHTJJvi8X6C1nuC1oJIZrGWPMI+edW6EbLp3Hw6qmWQsodu00s0nv7SiB/wa1DvkLzS7xQA==" -AsPlainText -Force
-$credential = New-Object System.Management.Automation.PSCredential -ArgumentList "Azure\hedgebook", $acctKey
-New-PSDrive -Name Z -PSProvider FileSystem -Root "\\hedgebook.file.core.windows.net\configuration" -Credential $credential -Persist
-   
-
-   File DirectoryCopy
-
+   	 }
+    
+    File TargetDir
     {
-
-         DestinationPath = "C:\Users"
-
-         Ensure = "Present"
-
-         SourcePath = "Z:\"
-
-         Type = "Directory"
-
-         Recurse = $true
-   
-   }
+          Type='Directory'
+          DestinationPath = "C:\DemoTo"
+          Ensure = "Present"
+    }
+    
+    xRemoteFile DownloadPackage        
+    {             
+       uri ="https://hedgebook.blob.core.windows.net/hedgebookv1/hbv1/hbv1.zip"             
+       DestinationPath = "C:\DemoTo"  
+       DependsOn = "[File]TargetDir"
+       MatchSource = $false          
+    }
  
-
-        Log AfterDirectoryCopy
-
-        {
-
-            # The message below gets written to the Microsoft-Windows-Desired State Configuration/Analytic log
-
-            Message = "Finished copying the PAS files with ID DirectoryCopy"
-            DependsOn = "[File]DirectoryCopy" # This means run "DirectoryCopy" first.
-        }
-        
-        archive ZipFile {
-
-        Path = "C:\Users\isa_services.zip"
-        Destination = "C:\Users"
+   archive ZipFile 
+   {
+       Path = "C:\DemoTo\hbv1.zip"
+       Destination = "C:\DemoTo"
+       Ensure = 'Present'
+   }
+   
+   archive ZipFile1 
+   {
+        Path = "C:\DemoTo\hbv1\isa_services.zip"
+        Destination = "C:\DemoTo\hbv1"
         Ensure = 'Present'
-        }
-
-
-        Service PasService {
-
-            Name = "PAS Service"
-            BuiltInAccount = "LocalSystem"
-            Path = "C:\Users\isa_services\Pas.exe"
-            StartupType = "Manual"
-            State       = "Running"
-        }
+      }
+   
+    Service PasService 
+    {
+          Name = "PAS Service"
+          BuiltInAccount = "LocalSystem"
+          Path = "C:\DemoTo\hbv1\isa_services\Pas.exe"
+          StartupType = "Manual"
+          State       = "Running"
+     }
 
 }
 

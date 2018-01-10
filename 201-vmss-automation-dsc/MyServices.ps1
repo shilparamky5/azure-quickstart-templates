@@ -66,7 +66,7 @@ Node "localhost"
     {
           Name = "PAS Service"
           BuiltInAccount = "LocalSystem"
-          Path = "C:\DemoTo\hbv1\isa_services\Pas.exe"
+          Path = "C:\isa_services\Pas.exe"
           StartupType = "Manual"
           State       = "Running"
      }

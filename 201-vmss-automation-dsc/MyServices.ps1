@@ -36,9 +36,31 @@ Node "localhost"
    archive ZipFile1 
    {
         Path = "C:\DemoTo\hbv1\isa_services.zip"
-        Destination = "C:\DemoTo\hbv1"
+        Destination = "C:\"
         Ensure = 'Present'
-      }
+    }
+    
+   archive ZipFile2
+   {
+        Path = "C:\DemoTo\hbv1\Resolution Software.zip"
+        Destination = "C:\Program Files"
+        Ensure = 'Present'
+    }
+
+   archive ZipFile4
+   {
+        Path = "C:\DemoTo\hbv1\RFSCommon.zip"
+        Destination = "C:\Windows\System32"
+        Ensure = 'Present'
+    }
+
+   archive ZipFile5
+   {
+        Path = "C:\DemoTo\hbv1\RFSCommonD.zip"
+        Destination = "C:\Windows\System32"
+        Ensure = 'Present'
+   }
+
    
     Service PasService 
     {

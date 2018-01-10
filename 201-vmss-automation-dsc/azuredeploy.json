@@ -318,8 +318,7 @@
           "tags": {},
           "dependsOn": [
             "[concat('Microsoft.Automation/automationAccounts/', parameters('automationAccountName'))]",
-            "[concat('Microsoft.Automation/automationAccounts/', parameters('automationAccountName'),'/Modules/',variables('dscModules').xNetworking.ModuleName)]",
-            "[concat('Microsoft.Automation/automationAccounts/', parameters('automationAccountName'),'/Modules/',variables('dscModules').xPSDesiredStateConfiguration.ModuleName)]"
+            "[concat('Microsoft.Automation/automationAccounts/', parameters('automationAccountName'),'/Modules/',variables('dscModules').xNetworking.ModuleName, variables('dscModules').xPSDesiredStateConfiguration.ModuleName)]",
           ],
           "properties": {
             "configuration": {
@@ -476,8 +475,7 @@
       "apiVersion": "2017-03-30",
       "dependsOn": [
         "[concat('Microsoft.Automation/automationAccounts/', parameters('automationAccountName'))]",
-        "[concat('Microsoft.Automation/automationAccounts/', parameters('automationAccountName'),'/Modules/',variables('dscModules').xNetworking.ModuleName)]",
-        "[concat('Microsoft.Automation/automationAccounts/', parameters('automationAccountName'),'/Modules/',variables('dscModules').xPSDesiredStateConfiguration.ModuleName)]",
+        "[concat('Microsoft.Automation/automationAccounts/', parameters('automationAccountName'),'/Modules/',variables('dscModules').xNetworking.ModuleName, variables('dscModules').xPSDesiredStateConfiguration.ModuleName)]",
         "[concat('Microsoft.Automation/automationAccounts/', parameters('automationAccountName'),'/Configurations/', parameters('configurationName'))]",
         "storageLoop",
         "[concat('Microsoft.Storage/storageAccounts/', variables('diagnosticsStorageAccountName'))]",

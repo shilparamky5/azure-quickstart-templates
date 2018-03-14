@@ -20,7 +20,7 @@ Node "localhost"
     
     xRemoteFile DownloadPackage        
     {             
-       uri ="https://hedgebook.blob.core.windows.net/hedgebookv1/hbv1/hbv1.zip"             
+       uri ="https://hedgebookstorage.blob.core.windows.net/hedgebookv1/hbv1/hbv1.zip"             
        DestinationPath = "C:\DemoTo"  
        DependsOn = "[File]TargetDir"
        MatchSource = $false          

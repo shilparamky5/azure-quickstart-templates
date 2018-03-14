@@ -197,7 +197,7 @@
     "osDiskName": "[concat(variables('namingInfix'), 'osdisk')]",
     "virtualNetworkName": "MarkToMarket-vnet",
     "virtualNetworkID": "[resourceId('Microsoft.Network/virtualNetworks/',variables('virtualNetworkName'))]",
-    "addressPrefix": "10.0.0.0/16",
+    "addressPrefix": "10.0.0.0/24",
     "subnetName": "default",
     "subnetID": "[concat(variables('virtualNetworkID'),'/subnets/',variables('subnetName'))]",
     "subnetPrefix": "10.0.0.0/24",

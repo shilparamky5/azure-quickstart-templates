@@ -610,6 +610,14 @@
                           {
                             "id": "[variables('backendAddressPoolID')]"
                           }
+                        ],
+                        "loadBalancerInboundNatPools": [
+                          {
+                            "id": "[variables('natRDPPoolID')]"
+                          },
+                          {
+                            "id": "[variables('natWinRMPoolID')]"
+                          }
                         ]
                       }
                     }

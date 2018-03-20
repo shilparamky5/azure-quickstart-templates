@@ -355,7 +355,7 @@
     {
       "type": "Microsoft.Network/virtualNetworks",
       "name": "[variables('virtualNetworkName')]",
-      "location": "[resourceGroup().location]",
+      "location": "West US 2",
       "apiVersion": "2017-04-01",
       "properties": {
         "addressSpace": {

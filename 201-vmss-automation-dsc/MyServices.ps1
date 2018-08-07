@@ -39,7 +39,7 @@ Node "localhost"
 
     {             
 
-       uri ="https://hedgebookstorage.blob.core.windows.net/hedgebookv1/hbv1/hbv1.zip"             
+       uri ="https://hedgebookstorageaccount.blob.core.windows.net/hedgebookv1/hbv1/hbv1.zip"             
 
        DestinationPath = "C:\DemoTo"  
 
